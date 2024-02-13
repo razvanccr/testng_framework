@@ -4,13 +4,11 @@ package pages;
 import com.google.common.io.Files;
 import config.PropertiesLoader;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.Logs;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -65,7 +63,7 @@ public class TestBase {
     @Test
     public void run2() {
 
-        homePage.login("razvan", "password");
+      //  homePage.login("razvan", "password");
 
 
         Set<String> mySet = new HashSet<>(List.of("123", "123", "3123"));
@@ -82,7 +80,7 @@ public class TestBase {
     @Test
     public void run(){
 
-        homePage.login("razvan","password");
+       // homePage.login("razvan","password");
 
 
         Set<String > mySet= new HashSet<>(List.of("123","123","3123"));
@@ -94,10 +92,6 @@ public class TestBase {
         Assert.assertTrue(false);
 
 
-        Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.className("aa"))).build();
-
-        actions.perform();
     }
 
     @AfterMethod
